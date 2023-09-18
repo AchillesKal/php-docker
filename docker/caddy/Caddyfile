@@ -19,10 +19,6 @@ log {
 }
 
 route {
-	# Healthcheck URL
-	respond /healthz 200
-	skip_log /healthz
-
 	root * /srv/app/public
 
 	php_fastcgi unix//var/run/php/php-fpm.sock

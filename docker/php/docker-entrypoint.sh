@@ -12,7 +12,7 @@ if [ "$1" = 'php-fpm' ] || [ "$1" = 'php' ]; then
 		composer init --no-interaction --name="your/project-name"
 	fi
 
-	if [ "$APP_ENV" != 'prod' ]; then
+	if [ ! -d 'vendor/' ]; then
 		composer install --prefer-dist --no-progress --no-interaction
 	fi
 
