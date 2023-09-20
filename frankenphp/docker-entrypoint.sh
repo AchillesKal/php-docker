@@ -1,12 +1,7 @@
 #!/bin/sh
 set -e
 
-# first arg is `-f` or `--some-option`
-if [ "${1#-}" != "$1" ]; then
-	set -- php-fpm "$@"
-fi
-
-if [ "$1" = 'php-fpm' ] || [ "$1" = 'php' ]; then
+if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 	# Install the project the first time PHP is started
 	if [ ! -f composer.json ]; then
 		composer init --no-interaction --name="your/project-name"
