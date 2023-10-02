@@ -4,7 +4,7 @@
 
 Use the `SERVER_NAME` environment variable to define your custom server name(s).
 
-    SERVER_NAME="app.localhost" docker compose up --wait
+    SERVER_NAME="app.localhost" docker compose up -d --wait
 
 *Tips: You can define your server name variable in your `.env` file to keep it at each up*
 
@@ -12,7 +12,7 @@ Use the `SERVER_NAME` environment variable to define your custom server name(s).
 
 Use the environment variables `HTTP_PORT`, `HTTPS_PORT` and/or `HTTP3_PORT` to adjust the ports to your needs, e.g.
 
-    HTTP_PORT=8000 HTTPS_PORT=4443 HTTP3_PORT=4443 docker compose up --wait
+    HTTP_PORT=8000 HTTPS_PORT=4443 HTTP3_PORT=4443 docker compose up -d --wait
 
 to access your application on [https://localhost:4443](https://localhost:4443).
 
