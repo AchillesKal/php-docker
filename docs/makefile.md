@@ -13,8 +13,6 @@ For example, in the [getting started section](/README.md#getting-started), the
 
 Of course, this template is basic for now. But, as your application is growing,
 you will probably want to add some targets like running your tests as described
-in [the Symfony book](https://symfony.com/doc/current/the-fast-track/en/17-tests.html#automating-your-workflow-with-a-makefile).
-You can also find a more complete example in this [snippet](https://www.strangebuzz.com/en/snippets/the-perfect-makefile-for-symfony).
 
 If you want to run make from within the `php` container, in the [Dockerfile](/Dockerfile),
 add:
@@ -79,11 +77,4 @@ vendor: ## Install vendors according to the current composer.lock file
 vendor: c=install --prefer-dist --no-dev --no-progress --no-scripts --no-interaction
 vendor: composer
 
-## —— Symfony 🎵 ———————————————————————————————————————————————————————————————
-sf: ## List all Symfony commands or pass the parameter "c=" to run a given command, example: make sf c=about
-	@$(eval c ?=)
-	@$(SYMFONY) $(c)
-
-cc: c=c:c ## Clear the cache
-cc: sf
 ```
